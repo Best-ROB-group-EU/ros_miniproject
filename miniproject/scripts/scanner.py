@@ -14,20 +14,20 @@ edge_kernel = 1                 #Edge thickness
 centering = int(img_size/2)          #Center coordinates for image
 dis_scale = 60                  #Measured distance scalar: 1 meter = 60 pixel
 
+lidar_l = int(centering-2)
+lidar_h = int(centering+2)
 
 #To continously paint data on the same image uncomment below and comment them out in the callback
 #img = np.zeros([img_size,img_size,1])                        #Creating blank image
 #img[:,:,0] = np.ones([img_size,img_size])*bg_col/255         #Colour background - 0 colour channels for greyscale
-
-lidar_l = int(centering-2)
-lidar_h = int(centering+2)
-
 #for x in range(lidar_l,lidar_h):                             #Paint lidar location on map in grey
 #    img[x,centering,0] = 127/255
 #    for y in range(lidar_l,lidar_h):
 #        img[x,y,0] = 127/255
 
-#cm = int(round(100/80,0))                                    #Paint tape measure for testing
+
+#Uncomment to paint tape measure for testing, each ring is 10 cm
+#cm = int(round(100/80,0))                                    
 #for x in range(0,30):
 #    distance = int(x*(10*cm))
 #    for y in range(0,360):
