@@ -27,7 +27,7 @@ lidar_h = int(centering+2)
 
 
 #Uncomment to paint tape measure for testing, each ring is 10 cm
-#cm = int(round(100/80,0))                                    
+#cm = int(round(100/60,0))                                    
 #for x in range(0,30):
 #    distance = int(x*(10*cm))
 #    for y in range(0,360):
